@@ -1,0 +1,85 @@
+name: CityBuild
+version: 1.0.0
+main: de.citybuild.CityBuildPlugin
+api-version: '26.2'
+description: Komplettes CityBuild-System mit Economy, Grundstuecken, Homes, Warps und Verkauf
+authors: [CityBuild]
+
+commands:
+  citybuild:
+    description: Verwaltung des CityBuild-Plugins
+    usage: /citybuild reload
+    permission: citybuild.admin
+  money:
+    description: Zeigt dein Guthaben
+    usage: /money [Spieler]
+    aliases: [bal, balance, geld]
+  pay:
+    description: Geld an einen Spieler senden
+    usage: /pay <Spieler> <Betrag>
+  baltop:
+    description: Die reichsten Spieler
+    usage: /baltop
+    aliases: [top]
+  eco:
+    description: Economy verwalten
+    usage: /eco <give|take|set> <Spieler> <Betrag>
+    permission: citybuild.eco
+  plot:
+    description: Grundstuecke verwalten
+    usage: /plot <claim|unclaim|info|trust|untrust|list>
+    aliases: [p, gs, grundstueck]
+  sethome:
+    description: Home setzen
+    usage: /sethome [Name]
+  home:
+    description: Zu einem Home teleportieren
+    usage: /home [Name]
+  delhome:
+    description: Home loeschen
+    usage: /delhome <Name>
+  homes:
+    description: Liste deiner Homes
+    usage: /homes
+  spawn:
+    description: Zum Spawn teleportieren
+    usage: /spawn
+  setspawn:
+    description: Spawn setzen
+    usage: /setspawn
+    permission: citybuild.admin
+  warp:
+    description: Zu einem Warp teleportieren
+    usage: /warp <Name>
+  warps:
+    description: Liste aller Warps
+    usage: /warps
+  setwarp:
+    description: Warp setzen
+    usage: /setwarp <Name>
+    permission: citybuild.admin
+  delwarp:
+    description: Warp loeschen
+    usage: /delwarp <Name>
+    permission: citybuild.admin
+  sell:
+    description: Items verkaufen
+    usage: /sell <hand|all|list>
+    aliases: [verkaufen]
+
+permissions:
+  citybuild.admin:
+    description: Admin-Befehle (Spawn, Warps, Reload)
+    default: op
+  citybuild.eco:
+    description: Zugriff auf /eco
+    default: op
+  citybuild.bypass:
+    description: Ueberall bauen, Grundstuecksschutz ignorieren
+    default: op
+  citybuild.tpdelay.bypass:
+    description: Keine Teleport-Verzoegerung
+    default: op
+  citybuild.plots.unlimited:
+    description: Unbegrenzt viele Grundstuecke
+    default: op

@@ -1,0 +1,77 @@
+# ===== CityBuild Konfiguration =====
+# Farbcodes mit & (z.B. &a = gruen, &c = rot)
+
+prefix: "&8[&bCityBuild&8] &7"
+
+economy:
+  start-balance: 1000.0
+  currency-symbol: "$"
+  max-pay: 1000000000.0
+
+plots:
+  # Welten, in denen der Grundstuecksschutz aktiv ist
+  worlds:
+    - world
+  # Preis pro Grundstueck (1 Chunk = 16x16 Bloecke, komplette Hoehe)
+  price: 2500.0
+  # Wie viel Prozent des Preises beim Verkauf zurueckerstattet werden
+  refund-percent: 50
+  # Maximale Anzahl Grundstuecke pro Spieler (Permission citybuild.plots.unlimited = unbegrenzt)
+  max-per-player: 5
+  # Radius um den Weltspawn, in dem nichts geclaimt werden darf
+  spawn-protect-radius: 64
+  # true = ausserhalb von Grundstuecken darf gebaut werden
+  build-outside-plots: false
+
+# PvP in den Grundstuecks-Welten erlauben?
+pvp: false
+
+homes:
+  # Standard-Anzahl Homes. Mehr per Permission: citybuild.homes.<Zahl> (z.B. citybuild.homes.10)
+  default-max: 3
+
+teleport:
+  # Wartezeit vor Teleport in Sekunden (0 = sofort)
+  delay-seconds: 3
+
+spawn:
+  teleport-on-first-join: true
+  respawn-at-spawn: true
+
+# Verkaufspreise pro Item (Material-Namen in GROSSBUCHSTABEN)
+sell:
+  prices:
+    COBBLESTONE: 0.25
+    STONE: 0.35
+    DEEPSLATE: 0.3
+    COBBLED_DEEPSLATE: 0.25
+    DIRT: 0.1
+    SAND: 0.2
+    GRAVEL: 0.2
+    OAK_LOG: 1.0
+    BIRCH_LOG: 1.0
+    SPRUCE_LOG: 1.0
+    WHEAT: 1.5
+    CARROT: 1.2
+    POTATO: 1.2
+    BEETROOT: 1.2
+    SUGAR_CANE: 1.0
+    PUMPKIN: 1.5
+    MELON_SLICE: 0.5
+    NETHER_WART: 2.0
+    KELP: 0.3
+    BAMBOO: 0.2
+    ROTTEN_FLESH: 0.4
+    BONE: 0.8
+    STRING: 0.8
+    GUNPOWDER: 2.0
+    COAL: 3.0
+    COPPER_INGOT: 4.0
+    IRON_INGOT: 8.0
+    GOLD_INGOT: 15.0
+    REDSTONE: 2.5
+    LAPIS_LAZULI: 3.0
+    QUARTZ: 3.0
+    DIAMOND: 60.0
+    EMERALD: 45.0
+    NETHERITE_SCRAP: 150.0
